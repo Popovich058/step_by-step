@@ -110,3 +110,20 @@ func (t Training) ActionInfo() (string, error) {
 
 	return result, nil
 }
+		
+	func (t Training) Print() {
+	fmt.Printf(
+		"Тренировка:\n"+
+		"  Тип: %s\n"+
+		"  Шаги: %d\n"+
+		"  Длительность: %.2f ч\n"+
+		"  Вес: %.1f кг\n"+
+		"  Рост: %.2f м\n",
+		t.TrainingType,
+		t.Steps,
+		t.Duration.Hours(),
+		t.Personal.Weight,
+		t.Personal.Height,
+	)
+}
+

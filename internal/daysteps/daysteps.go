@@ -97,5 +97,19 @@ func (ds DaySteps) ActionInfo() (string, error) {
 		calories,
 	)
 
-	return result, nil
+	return result, nil	
+}	
+	
+	func (ds DaySteps) Print() {
+	fmt.Printf(
+		"Дневная активность:\n"+
+		"  Шаги: %d\n"+
+		"  Длительность: %.2f ч\n"+
+		"  Вес: %.1f кг\n"+
+		"  Рост: %.2f м\n",
+		ds.Steps,
+		ds.Duration.Hours(),
+		ds.Personal.Weight,
+		ds.Personal.Height,
+	)
 }
